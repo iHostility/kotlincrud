@@ -8,6 +8,6 @@ import javax.persistence.*
 @Table(name = "messages")
 class Message(
     @Id @GeneratedValue val id: UUID?,
-    val text: String?,
+    @Column(columnDefinition = "TEXT") val text: String?,
     @CreationTimestamp val createdAt: Date?
 )
