@@ -7,7 +7,7 @@ import javax.persistence.*
 @Entity
 @Table(name = "messages")
 class Message(
-    @Id @GeneratedValue val id: UUID?,
-    val text: String?,
-    @CreationTimestamp val createdAt: Date?
+    @Column(columnDefinition = "TEXT") var text: String?,
+    @CreationTimestamp var createdAt: Date?,
+    @Id @GeneratedValue val id: UUID? = null,
 )
